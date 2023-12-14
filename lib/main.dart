@@ -1,19 +1,38 @@
+import 'package:cinewave/appbar.dart';
 import 'package:flutter/material.dart';
+import 'home.dart';
+import 'bottombar.dart';
 
 void main() {
   runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return CWApp(
+      body: AppContent(),
+      bottomNavigationBar: MyBottomNavigationBar(), // Ajoutez la barre de navigation inférieure ici
+    );
+  }
+}
+
+class CWApp extends StatelessWidget {
+  final Widget body;
+  final Widget? bottomNavigationBar;
+
+  const CWApp({Key? key, required this.body, this.bottomNavigationBar})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+        appBar: CWAppBar(),
+        body: body,
+        bottomNavigationBar: bottomNavigationBar,
       ),
     );
   }
