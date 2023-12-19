@@ -1,6 +1,6 @@
 import 'package:cinewave/appbar.dart';
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'pages/home.dart';
 import 'bottombar.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CWApp(
-      body: AppContent(),
+      body: Popular(),
       bottomNavigationBar: MyBottomNavigationBar(), // Ajoutez la barre de navigation inférieure ici
     );
   }

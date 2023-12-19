@@ -27,8 +27,8 @@ class MyBottomNavigationBar extends StatelessWidget {
           label: 'Profil',
         ),
       ],
-      unselectedItemColor: const Color.fromARGB(255, 255, 0, 0),
-      selectedItemColor: const Color(0xFF861D1D),
+      unselectedItemColor: Color.fromARGB(255, 255, 255, 255),
+      selectedItemColor: Color.fromARGB(255, 255, 255, 255),
       backgroundColor: const Color(0xFF0B2F44),
       showSelectedLabels: true, // Afficher les labels pour les éléments sélectionnés
       showUnselectedLabels: false, // Masquer les labels pour les éléments non sélectionnés
